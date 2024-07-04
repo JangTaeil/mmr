@@ -21,7 +21,7 @@ const Detail = () => {
           <img src={champ}
             style={{}} />
         </div>
-        <div style={{marginRight:"100px"}}>
+        <div style={{marginRight:"170px"}}>
           <img src={advertise3} style={{width:'200%'}}/>
         </div>
       </div>
