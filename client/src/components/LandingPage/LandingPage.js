@@ -13,7 +13,7 @@ function LandingPage() {
 
     <div>
       <Link to='/'>
-        <div style={{ textAlign: "center", margin: '0, auto' }}>
+        <div style={{ textAlign: "center", margin: '0 auto' }}>
           <img src={logo2} />
         </div>
       </Link>
@@ -35,7 +35,7 @@ function LandingPage() {
           onChange={handleChange}
           tokenSeparators={[',']}
           options={options}
-          style={{ width: '600px', margin: '0, auto' }}/>
+          style={{ width: '600px', margin: '0 auto' }}/>
       </div>
       <div style={{ textAlign: "center", margin: '100px auto 0 auto' }}>
         <img src={advertise} />

@@ -12,7 +12,7 @@ function App() {
               <div style={{ minHeight: '100vh' }}>
                 <Routes>
                   <Route path="/" element={<LandingPage />} />
-                  <Route path="/ranking" element={<Ranking />} />
+                  <Route path="/champranking" element={<Ranking />} />
                   </Routes>
                </div>
             <Footer />

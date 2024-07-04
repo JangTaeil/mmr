@@ -1,7 +1,9 @@
-import { Button, Layout, Menu, Col } from 'antd';
+import { Button, Layout, Menu } from 'antd';
 import React from 'react';
 import logo3 from '../../images/logo3.PNG'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 
 const { Header } = Layout;
@@ -18,6 +20,9 @@ const buttonstyle = {
 }
 
 const NavBar = () => {
+  const navigate = useNavigate();
+
+
   return (
     <Layout style={{ backgroundColor: '#fff' }}>
       <Header
@@ -36,7 +41,7 @@ const NavBar = () => {
             <img
               src={logo3}
               alt="map logo"
-              style={{ position: 'relative', top: '15px', right: '50px', width: '100px' }} />
+              style={{ position: 'relative', top: '15px', width: '100px' }} />
           </Link>
         </div>
 
@@ -52,37 +57,27 @@ const NavBar = () => {
             margin: 'o, auto'
           }}
         >
-          <Link to="/">
-            <Menu.Item key="홈" style={buttonstyle}>홈</Menu.Item>
-          </Link>
-
-          {/* <Link to="/ranking">
-            <Menu.Item key="챔피언 랭킹" style={buttonstyle}>챔피언 랭킹</Menu.Item>
-          </Link> */}
-          <a href='/ranking'>
-            <Menu.Item key="챔피언 랭킹" style={buttonstyle}>
-              챔피언 랭킹
-            </Menu.Item>
-          </a>
-
-          <Link to="/#">
-            <Menu.Item key="유저 랭킹" style={buttonstyle}>유저 랭킹</Menu.Item>
-          </Link>
-
-          <Link to="/#">
-            <Menu.Item key="유료 시스템" style={buttonstyle}>유료 시스템 </Menu.Item>
-          </Link>
-
-          <Link to="/#">
-            <Menu.Item key="커뮤니티" style={buttonstyle} >커뮤니티</Menu.Item>
-          </Link>
-
+          <Menu.Item key="홈" style={buttonstyle} onClick={() => navigate('/')}>
+            홈
+          </Menu.Item>
+          <Menu.Item key="챔피언 랭킹" style={buttonstyle} onClick={() => navigate('/champranking')}>
+            챔피언 랭킹
+          </Menu.Item>
+          <Menu.Item key="유저 랭킹" style={buttonstyle} onClick={() => navigate('/userranking')}>
+            유저 랭킹
+          </Menu.Item>
+          <Menu.Item key="유료 시스템" style={buttonstyle} onClick={() => navigate('/system')}>
+            유료 시스템
+          </Menu.Item>
+          <Menu.Item key="커뮤니티" style={buttonstyle} onClick={() => navigate('/comunity')}>
+            커뮤니티
+          </Menu.Item>
         </Menu>
 
         <Button style={{ backgroundColor: '#00bfff' }}>로그인</Button>
 
       </Header>
-    </Layout>
+    </Layout >
 
   );
 };

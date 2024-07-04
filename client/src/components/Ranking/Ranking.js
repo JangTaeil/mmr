@@ -1,24 +1,30 @@
 import { Button, Input } from 'antd';
 import advertise2 from '../../images/advertise2.png';
 import champ from '../../images/champ.png';
+import advertise3 from '../../images/advertise3.PNG'
 
 const Detail = () => {
-  
-  return (
-    <div style={{ width: '100%' }}>
-        <div>
-        <p style={{ position: 'relative', top: '40px', right: '-350px' }}>
-          <Input placeholder='검색 : 플레이어 닉네임' style={{ width: '600px' }}/>
-          <Button htmlType="submit" style={{marginLeft: '10px', border: ' solid #00bfff', color: '#00bfff', fontWeight: 'bold', padding: '15px 15px'}}>조회</Button>        
-        </p>
-      </div>
-      <img
-        src={advertise2}
-        style={{position: 'relative', top: '140px', left: '80px', width: '130px'}}/>
-      <img
-        src={champ}
-        style={{position: 'relative', top: '150px', left: '200px', width: '230px'}}/>
 
+  return (
+    <div>
+      <div style={{ margin: '50px auto', textAlign: 'center' }}>
+        <Input placeholder='검색 : 플레이어 닉네임' style={{ width: '800px', height: '4rem'}} />
+        <Button htmlType="submit" style={{ marginLeft: '10px', border: ' solid #00bfff', color: '#00bfff', fontWeight: 'bold', padding: '15px 15px' }}>조회</Button>
+      </div>
+
+      <div style={{display: 'flex' }}>
+        <div>
+          <img src={advertise2}
+            style={{margin:'170px 0 0 30px', width:'300px'}} />
+        </div>
+        <div style={{width:'1500px'}}>
+          <img src={champ}
+            style={{}} />
+        </div>
+        <div style={{marginRight:"100px"}}>
+          <img src={advertise3} style={{width:'200%'}}/>
+        </div>
+      </div>
     </div>
   )
 }

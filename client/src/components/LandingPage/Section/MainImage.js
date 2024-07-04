@@ -19,7 +19,7 @@ function MainImage(props) {
         // backgroundColor: '#ff0'
       }}>
       <h2>{props.title}</h2>
-      <p>{props.overview}</p>
+      <div>{props.overview}</div>
       </div>
     </div>
   )
