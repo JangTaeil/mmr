@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const { Header } = Layout;
 const buttonstyle = {
-  backgroundColor: '#00bfff', 
+  backgroundColor: '#00bfff',
   borderRadius: '10px',
   color: '#fff',
   fontSize: '22px',
@@ -20,59 +20,69 @@ const buttonstyle = {
 const NavBar = () => {
   return (
     <Layout style={{ backgroundColor: '#fff' }}>
-    <Header
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        margin: '0, auto',
-        height: '100px',
-        flexDirection : 'row',
-        backgroundColor: '#fff',
-        justifyContent: 'center', 
-      }}
-    >
-      <div>
-        <Link to="/">
-          <img
-            src={logo3}
-            alt="map logo"
-            style={{position: 'relative', top: '15px', right: '50px', width: '100px'}}/>
-            </Link>
-      </div>
-      
-      <Menu
-        className="nav-menu"
-        theme="light"
-        mode="horizontal"
+      <Header
         style={{
-          flex: 1,
-          justifyContent: 'space-around',
-          width: '100px',
-          border: 'none',
-          margin: 'o, auto'
+          display: 'flex',
+          alignItems: 'center',
+          margin: '0, auto',
+          height: '100px',
+          flexDirection: 'row',
+          backgroundColor: '#fff',
+          justifyContent: 'center',
         }}
       >
-        <Menu.Item key="홈" style={buttonstyle}>
-          <Link to="/">홈</Link>
-        </Menu.Item>
-        <Menu.Item key="챔피언 랭킹" style={buttonstyle}>
-          <Link to="/ranking">챔피언 랭킹</Link>
-        </Menu.Item>
-        <Menu.Item key="유저 랭킹" style={buttonstyle}>
-          <Link to="/">유저 랭킹</Link>
-        </Menu.Item>
-        <Menu.Item key="유료 시스템" style={buttonstyle}>
-          <Link to="/">유료 시스템</Link>
-        </Menu.Item>
-        <Menu.Item key="커뮤니티" style={buttonstyle} >
-          <Link to="/">커뮤니티</Link>
-        </Menu.Item>
-      </Menu> 
-      
-      <Button style={{ backgroundColor: '#00bfff'}}>로그인</Button>
-      
-    </Header>
-  </Layout>
+        <div>
+          <Link to="/">
+            <img
+              src={logo3}
+              alt="map logo"
+              style={{ position: 'relative', top: '15px', right: '50px', width: '100px' }} />
+          </Link>
+        </div>
+
+        <Menu
+          className="nav-menu"
+          theme="light"
+          mode="horizontal"
+          style={{
+            flex: 1,
+            justifyContent: 'space-around',
+            width: '100px',
+            border: 'none',
+            margin: 'o, auto'
+          }}
+        >
+          <Link to="/">
+            <Menu.Item key="홈" style={buttonstyle}>홈</Menu.Item>
+          </Link>
+
+          {/* <Link to="/ranking">
+            <Menu.Item key="챔피언 랭킹" style={buttonstyle}>챔피언 랭킹</Menu.Item>
+          </Link> */}
+          <a href='/ranking'>
+            <Menu.Item key="챔피언 랭킹" style={buttonstyle}>
+              챔피언 랭킹
+            </Menu.Item>
+          </a>
+
+          <Link to="/#">
+            <Menu.Item key="유저 랭킹" style={buttonstyle}>유저 랭킹</Menu.Item>
+          </Link>
+
+          <Link to="/#">
+            <Menu.Item key="유료 시스템" style={buttonstyle}>유료 시스템 </Menu.Item>
+          </Link>
+
+          <Link to="/#">
+            <Menu.Item key="커뮤니티" style={buttonstyle} >커뮤니티</Menu.Item>
+          </Link>
+
+        </Menu>
+
+        <Button style={{ backgroundColor: '#00bfff' }}>로그인</Button>
+
+      </Header>
+    </Layout>
 
   );
 };
