@@ -1,10 +1,21 @@
-import { Button, Layout, Menu } from 'antd';
+import { Button, Layout, Menu, Col } from 'antd';
 import React from 'react';
-import logo from '../../images/logo.png'
+import logo3 from '../../images/logo3.PNG'
+import { Link } from 'react-router-dom';
 
 
 const { Header } = Layout;
-
+const buttonstyle = {
+  backgroundColor: '#00bfff', 
+  borderRadius: '10px',
+  color: '#fff',
+  fontSize: '22px',
+  display: 'inline-block',
+  height: '4rem',
+  width: '250px',
+  margin: '0 5px',
+  textAlign: 'center'
+}
 
 const NavBar = () => {
   return (
@@ -13,19 +24,22 @@ const NavBar = () => {
       style={{
         display: 'flex',
         alignItems: 'center',
+        margin: '0, auto',
         height: '100px',
+        flexDirection : 'row',
         backgroundColor: '#fff',
-        justifyContent: 'space-around',
+        justifyContent: 'center', 
       }}
     >
       <div>
-        <a href='/'>
+        <Link to="/">
           <img
-            src={logo}
+            src={logo3}
             alt="map logo"
             style={{position: 'relative', top: '15px', right: '50px', width: '100px'}}/>
-            </a>
+            </Link>
       </div>
+      
       <Menu
         className="nav-menu"
         theme="light"
@@ -33,30 +47,30 @@ const NavBar = () => {
         style={{
           flex: 1,
           justifyContent: 'space-around',
-          minWidth: '900px',
-          width: '900px',
-          border: 'none'
+          width: '100px',
+          border: 'none',
+          margin: 'o, auto'
         }}
       >
-        <Menu.Item key="홈">
-          <a href="/">홈</a>
+        <Menu.Item key="홈" style={buttonstyle}>
+          <Link to="/">홈</Link>
         </Menu.Item>
-        <Menu.Item key="챔피언 랭킹">
-          <a href="/ranking">챔피언 랭킹</a>
+        <Menu.Item key="챔피언 랭킹" style={buttonstyle}>
+          <Link to="/ranking">챔피언 랭킹</Link>
         </Menu.Item>
-        <Menu.Item key="유저 랭킹">
-          <a href="/">유저 랭킹</a>
+        <Menu.Item key="유저 랭킹" style={buttonstyle}>
+          <Link to="/">유저 랭킹</Link>
         </Menu.Item>
-        <Menu.Item key="유료 시스템">
-          <a href="/">유료 시스템</a>
+        <Menu.Item key="유료 시스템" style={buttonstyle}>
+          <Link to="/">유료 시스템</Link>
         </Menu.Item>
-        <Menu.Item key="커뮤니티">
-          <a href="/">커뮤니티</a>
+        <Menu.Item key="커뮤니티" style={buttonstyle} >
+          <Link to="/">커뮤니티</Link>
         </Menu.Item>
-      </Menu>
-
+      </Menu> 
+      
       <Button style={{ backgroundColor: '#00bfff'}}>로그인</Button>
-
+      
     </Header>
   </Layout>
 

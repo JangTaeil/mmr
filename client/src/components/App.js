@@ -6,18 +6,18 @@ import Ranking from './Ranking/Ranking';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <div style={{ minHeight: '100vh' }}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/ranking" element={<Ranking />} />
-          </Routes>
+        <Router basename={process.env.PUBLIC_URL}>
+          <div className="App">
+            <NavBar />
+              <div style={{ minHeight: '100vh' }}>
+                <Routes>
+                  <Route path="/" element={<LandingPage />} />
+                  <Route path="/ranking" element={<Ranking />} />
+                  </Routes>
+               </div>
+            <Footer />
+        </div>
         </Router>
-      </div>
-      <Footer />
-    </div>
   );
 }
 
