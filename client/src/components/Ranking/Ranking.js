@@ -7,7 +7,7 @@ import { IMAGE_BASE_URL } from '../Config';
 
 const Ranking = () => {
   // 객체에서 배열 형태로 변환
-  const data_list = Object.values(alldata.data); 
+  const data_list = Object.values(alldata.data);
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Ranking = () => {
               <div key={index} style={{ display: 'flex', alignItems: 'center', margin: '5px', width: '100px' }}>
                 <img src={`${IMAGE_BASE_URL}/${champion.image.full}`} alt={`챔피언 ${champion.name} 이미지`} style={{ width: '48px', height: '48px', marginRight: '10px' }} />
               </div>
-              <span>{champion.name}</span>
+              <span>{champion.name.length > 6 ? champion.name.substring(0, 4) + "..." : champion.name}</span>
             </div>
           ))}
         </div>
