@@ -23,7 +23,7 @@ const GridCards = (props) => {
           <a href={`/movie/${props.movieId}`}>
             <img
             style={{width: '100%'}}
-            src={props.path}
+            src={props.image}
             alt={props.title}
             />
           </a>
