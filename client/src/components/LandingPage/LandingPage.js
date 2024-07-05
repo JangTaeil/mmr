@@ -1,16 +1,16 @@
 import React from 'react';
 import logo2 from '../../images/logo2.png'
 import advertise from '../../images/advertise.png'
-import { Button, Input} from 'antd';
+import { Button, Input } from 'antd';
 import { Link } from 'react-router-dom';
 import { InputNumber, Space } from 'antd';
 
 
 
 function LandingPage() {
-  const onChange = (value) => {
-    console.log('changed', value);
-  };
+  // const onChange = (value) => {
+  //   console.log('changed', value);
+  // };
 
   return (
 
@@ -28,14 +28,13 @@ function LandingPage() {
       <div style={{ textAlign: "center", margin: '30px auto 0 -70px' }}>
         <Space>
           <InputNumber
+            min={1}
+            max={1}
             defaultValue={'인기 커뮤니티 글'}
-            formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-            parser={(value) => value?.replace(/\$\s?|(,*)/g, '')}
-            onChange={onChange}
-            style={{width: '600px'}}
+            style={{ width: '600px' }}
           />
-          </Space>
-   
+        </Space>
+
       </div>
       <div style={{ textAlign: "center", margin: '100px auto 0 auto' }}>
         <img src={advertise} />

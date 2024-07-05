@@ -1,18 +1,16 @@
-import { Button, Input, Row } from 'antd';
-import advertise2 from '../../images/advertise2.png';
-import champ from '../../images/champ.png';
-import advertise3 from '../../images/advertise3.PNG'
-import alldata from '../../data/alldata.json'
-import AntCard from '../commons/AntCard';
+import { Button, Input } from 'antd';
 import React from 'react';
+import alldata from '../../data/alldata.json';
+import advertise2 from '../../images/advertise2.png';
+import advertise3 from '../../images/advertise3.PNG';
 import { IMAGE_BASE_URL } from '../Config';
-import { useState } from 'react';
 import { Card } from 'antd';
+
+const { Meta } = Card;  
 
 const Ranking = () => {
 
-  const [Champion, setCampion] = useState([]);
-  const { Meta } = Card;
+  const data_list = Object.values(alldata.data);
 
   return (
     <div>
@@ -26,27 +24,18 @@ const Ranking = () => {
           <img src={advertise2}
             style={{ margin: '170px 0 0 30px', width: '300px' }} />
         </div>
-        <div style={{ width: '1500px' }}>
-          {/* <img src={champ}
-            style={{}} /> */}
-          {/* <Row gutter={[10, 10]}>
-            {alldata.map(cham => {
-              return (
-                <React.Fragment key={cham.id}>
-                  <AntCard
-                    landingPage
-                    img={cham.image}
-                    title={cham.title}
-                    movieId={cham.id}
-                  />
-                </React.Fragment>
-              );
-            })}
-          </Row> */}
-          <img src={`${IMAGE_BASE_URL}/${alldata.data.Aatrox.image.full}`}/>
-          {/* <Meta title={`${alldata.data.Aatrox.name}`} /> */}
-          <img src={`${IMAGE_BASE_URL}/${alldata.data.Ahri.image.full}`}/>
-          <img src={`${IMAGE_BASE_URL}/${alldata.data.Akali.image.full}`}/>
+
+        <div style={{ width: '1500px', display: 'flex', flexWrap: 'wrap' }}>
+        {data_list.map((champion, index) => (
+             <Card
+             hoverable
+             style={{
+               width: 200,
+             }}
+             cover={<img key={index} src={`${IMAGE_BASE_URL}/${champion.image.full}`} alt={`챔피언 ${champion.name} 이미지`} style={{ width: '48px', height: '48px', margin: '3px' }} /> }>
+              <Meta title={`${champion.name}`}/>
+             </Card>
+          ))}
         </div>
         <div style={{ marginRight: "170px" }}>
           <img src={advertise3} style={{ width: '200%' }} />
