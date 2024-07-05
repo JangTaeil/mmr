@@ -22,8 +22,7 @@ lol이라는 게임을 사용하는 유저들이 좀더 편리하고, 쉽게 게
 <br/>
 
 ### ⚙️ 개발 환경
-Windows 10,  VSCODE, CSS, JavaScript, react 18.3.1 
-
+Windows 10,  VSCODE, CSS, JavaScript, react 18.3.1 , Ant Design
 
 ### 렌딩페이지
 ![렌딩페이지](https://github.com/JangTaeil/mmr/assets/127705396/c942c68e-458f-40d1-9339-ecc879ff7f5c)
