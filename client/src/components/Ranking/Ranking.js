@@ -19,7 +19,7 @@ const Ranking = () => {
       <div style={{ display: 'flex', alignItems: 'flex-start' }}>
         {/* 좌측 광고 이미지 */}
         <div style={{ marginRight: '20px' }}>
-          <img src={advertise2} alt="좌측 광고 이미지" style={{ width: '300px' }} />
+          <img src={advertise2} alt="좌측 광고 이미지" style={{ width: '300px', marginRight:'50px' }} />
         </div>
 
         <div style={{ width: 'calc(100% - 620px)', display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start' }}>

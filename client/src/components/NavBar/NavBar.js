@@ -4,16 +4,29 @@ import logo3 from '../../images/logo3.PNG'
 import { Link, useNavigate } from 'react-router-dom';
 
 const { Header } = Layout;
+// const buttonstyle = {
+//   backgroundColor: '#00bfff',
+//   borderRadius: '10px',
+//   color: '#fff',
+//   fontSize: '22px',
+//   display: 'inline-block',
+//   height: '60px',
+//   width: '150px',
+//   margin: '0 5px',
+//   textAlign: 'center',
+  
+// }
 const buttonstyle = {
   backgroundColor: '#00bfff',
   borderRadius: '10px',
   color: '#fff',
-  fontSize: '22px',
+  fontSize: '15px',
   display: 'inline-block',
-  height: '60px',
-  width: '150px',
-  margin: '0 5px',
-  textAlign: 'center',
+  lineHeight: '50px',
+  width: '130px',
+  margin: '0 30px',
+  textAlign: 'center'
+
   
 }
 
@@ -21,7 +34,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <Layout style={{ backgroundColor: '#fff', width:'1200px', margin: '0 auto' }}>
+    <Layout style={{ backgroundColor: '#fff', width:'1400px', margin: '0 auto' }}>
       <Header
         style={{
           display: 'flex',
@@ -38,7 +51,7 @@ const NavBar = () => {
             <img
               src={logo3}
               alt="map logo"
-              style={{ position: 'relative', top: '15px', width: '100px' }} />
+              style={{ position: 'relative', top: '15px', width: '100px', marginRight:'50px' }} />
           </Link>
         </div>
 
@@ -71,8 +84,8 @@ const NavBar = () => {
           </Menu.Item>
         </Menu>
 
-        <Button style={{ backgroundColor: '#00bfff' }}>로그인</Button>
 
+        <Button style={{ backgroundColor: '#00bfff', marginLeft:'100px' }}>로그인</Button>
       </Header>
     </Layout >
 
