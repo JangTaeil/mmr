@@ -3,7 +3,7 @@
 function Footer() {
   return(
     <div style={{
-      height: '200 px',
+      height: '200px',
       display: 'grid',
       alignItems: 'center',
       justifyContent: 'center',

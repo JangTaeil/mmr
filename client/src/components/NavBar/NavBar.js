@@ -11,10 +11,10 @@ const buttonstyle = {
   backgroundColor: '#00bfff',
   borderRadius: '10px',
   color: '#fff',
-  fontSize: '22px',
+  fontSize: '15px',
   display: 'inline-block',
-  height: '4rem',
-  width: '250px',
+  lineHeight: '50px',
+  width: '130px',
   margin: '0 5px',
   textAlign: 'center'
 }
@@ -24,16 +24,19 @@ const NavBar = () => {
 
 
   return (
-    <Layout style={{ backgroundColor: '#fff' }}>
+    <Layout style={{ backgroundColor: '#fff', margin: '0, auto' }}>
+      <div>
       <Header
         style={{
+          width: '1000px',
           display: 'flex',
           alignItems: 'center',
-          margin: '0, auto',
           height: '100px',
           flexDirection: 'row',
           backgroundColor: '#fff',
-          justifyContent: 'center',
+          justifyContent:  'space-around',
+          margin: '0, auto',
+          textAlign: 'center'
         }}
       >
         <div>
@@ -50,11 +53,11 @@ const NavBar = () => {
           theme="light"
           mode="horizontal"
           style={{
-            flex: 1,
+            flex:'6',
             justifyContent: 'space-around',
             width: '100px',
             border: 'none',
-            margin: 'o, auto'
+            margin: '0, auto'
           }}
         >
           <Menu.Item key="홈" style={buttonstyle} onClick={() => navigate('/')}>
@@ -77,6 +80,7 @@ const NavBar = () => {
         <Button style={{ backgroundColor: '#00bfff' }}>로그인</Button>
 
       </Header>
+      </div>
     </Layout >
 
   );
