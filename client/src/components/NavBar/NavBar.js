@@ -54,10 +54,11 @@ const NavBar = () => {
           mode="horizontal"
           style={{
             flex:'6',
-            justifyContent: 'space-around',
+            justifyContent: 'center',
             width: '100px',
             border: 'none',
-            margin: '0, auto'
+            margin: '0, auto',
+            textAlign:'center'
           }}
         >
           <Menu.Item key="홈" style={buttonstyle} onClick={() => navigate('/')}>
