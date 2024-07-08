@@ -10,6 +10,7 @@ function Footer() {
       fontSize: '1rem',
       backgroundColor : "skyblue", 
       color: "#fff",
+      marginTop:'100px'
     }}>
       <div>주식회사 엠엠알지지 (MMR.GG)   통신판매업신고 : 제2024 서울강남-01973호 사업자등록번호 : 000-11-00000 대표자 : 장태일</div>
     </div>
