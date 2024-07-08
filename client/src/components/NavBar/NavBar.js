@@ -3,40 +3,34 @@ import React from 'react';
 import logo3 from '../../images/logo3.PNG'
 import { Link, useNavigate } from 'react-router-dom';
 
-
-
-
 const { Header } = Layout;
 const buttonstyle = {
   backgroundColor: '#00bfff',
   borderRadius: '10px',
   color: '#fff',
-  fontSize: '15px',
+  fontSize: '22px',
   display: 'inline-block',
-  lineHeight: '50px',
-  width: '130px',
+  height: '60px',
+  width: '150px',
   margin: '0 5px',
-  textAlign: 'center'
+  textAlign: 'center',
+  
 }
 
 const NavBar = () => {
   const navigate = useNavigate();
 
-
   return (
-    <Layout style={{ backgroundColor: '#fff', margin: '0, auto' }}>
-      <div>
+    <Layout style={{ backgroundColor: '#fff', width:'1200px', margin: '0 auto' }}>
       <Header
         style={{
-          width: '1000px',
           display: 'flex',
           alignItems: 'center',
+          margin: '0, auto',
           height: '100px',
           flexDirection: 'row',
           backgroundColor: '#fff',
-          justifyContent:  'space-around',
-          margin: '0, auto',
-          textAlign: 'center'
+          justifyContent: 'center'
         }}
       >
         <div>
@@ -53,12 +47,11 @@ const NavBar = () => {
           theme="light"
           mode="horizontal"
           style={{
-            flex:'6',
-            justifyContent: 'center',
+            flex: 1,
+            justifyContent: 'space-around',
             width: '100px',
             border: 'none',
-            margin: '0, auto',
-            textAlign:'center'
+            margin: 'o, auto'
           }}
         >
           <Menu.Item key="홈" style={buttonstyle} onClick={() => navigate('/')}>
@@ -81,7 +74,6 @@ const NavBar = () => {
         <Button style={{ backgroundColor: '#00bfff' }}>로그인</Button>
 
       </Header>
-      </div>
     </Layout >
 
   );
